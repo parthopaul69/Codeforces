@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But do not ignore directories
+!*/
+
+# Track only C++ source files
+!*.cpp
+
+# Keep important files
+!.gitignore
+!README.md
