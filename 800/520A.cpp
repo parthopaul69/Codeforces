@@ -10,10 +10,7 @@ int main()
     set<char>st;
     for(char c:s)
     {
-        if(c>='A' && c<='Z')
-        {
-            c=tolower(c);
-        }
+        c=tolower(c);
         st.insert(c);
     }
     if(st.size()==26)
