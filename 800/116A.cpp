@@ -4,18 +4,18 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n,count=0;
+    int n,max=0,temp=0;
     cin>>n;
-    while(n!=0)
+    vector<pair<int,int>>v(n);
+    for(int i=0;i<n;i++)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(a+b+c>=2)
+        cin>>v[i].first>>v[i].second;
+        temp=temp+(v[i].second-v[i].first);
+        if(temp>max)
         {
-            count++;
+            max=temp;
         }
-        n--;
     }
-    cout<<count;
+    cout<<max;
     return 0;
 }
