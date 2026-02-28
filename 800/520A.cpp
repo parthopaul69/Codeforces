@@ -7,12 +7,8 @@ int main()
     int n;
     string s;
     cin>>n>>s;
-    set<char>st;
-    for(char c:s)
-    {
-        c=tolower(c);
-        st.insert(c);
-    }
+    transform(s.begin(),s.end(),s.begin(),::toupper);
+    set<char>st(s.begin(),s.end());
     if(st.size()==26)
     {
         cout<<"YES";
