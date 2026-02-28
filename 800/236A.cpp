@@ -4,13 +4,9 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string str;
-    cin>>str;
-    set<char> st;
-    for(char s:str)
-    {
-        st.insert(s);
-    }
+    string s;
+    cin>>s;
+    set<char> st(s.begin(),s.end());
     if(st.size()%2==0)
     {
         cout<<"CHAT WITH HER!";
