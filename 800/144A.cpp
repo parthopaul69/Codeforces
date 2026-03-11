@@ -4,21 +4,26 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n,h,out=0;
-    cin>>n>>h;
+    int n,max=0,min=0,count=0;
+    cin>>n;
     vector<int>v(n);
     for(int i=0;i<n;i++)
     {
         cin>>v[i];
-        if(v[i]<=h)
+        if(v[max]<v[i])
         {
-            out+=1;
+            max=i;
         }
-        else
+        if(v[min]>=v[i])
         {
-            out+=2;
+            min=i;
         }
     }
-    cout<<out;
+    count=max+(n-1-min);
+    if(max>min)
+    {
+        count--;
+    }
+    cout<<count;
     return 0;
 }
